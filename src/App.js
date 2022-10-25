@@ -1,22 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Mensaje from './components/mensaje'
+import Formulario from './components/form/Form';
+import Cartel from './components/cartel';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Mensaje 
+          className="msj"
+        />
+        <Formulario />
+        <h3>La ultima vez se ingreso: </h3>
+        <Cartel />
       </header>
     </div>
   );
