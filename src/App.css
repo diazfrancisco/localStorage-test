@@ -57,6 +57,10 @@ button {
 
 }
 
+button:click {
+  color:rgb(29, 72, 94)
+}
+
 input{
   margin:5px 0;
   padding:3px;

@@ -1,37 +1,39 @@
-import React,{useState} from "react";
+import React,{useContext, useState} from "react";
+import Context from '../../context/useContextStorage'
 
 export default function Formulario() {
+  
+  const {nombre, setNombre}= useContext(Context)
 
-  const [nombre, setNombre] = useState("")
+  const [local, setLocal] = useState('')
 
-  const onSubmit = (nombre) => {
-    console.log(nombre)
-    localStorage.setItem('datos',JSON.stringify(nombre))
+  const onSubmit = (local) => {
+    localStorage.setItem('datos',JSON.stringify({"nombre":local}))
+    setNombre(local)
+    setLocal('')
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    onSubmit({nombre})
-    setNombre('');
+    console.log(nombre)
+    onSubmit(local)
   }
 
   const handleChange = (e) => {
-    console.log(e.target.value)
-    setNombre(e.target.value)
+    setLocal(e.target.value)
+    console.log(local)
   }
 
   return(
     <form onSubmit={handleSubmit}>
-      <label forHTML="nombre">Guardar nombre </label>
+      <label forhtml="nombre">Save a word</label>
       <input 
         type="text"
         id="nombre"
-        value={nombre}
         onChange={handleChange}
-        placeholder="Ingresa tu nombre"
-
+        placeholder="Type a word"
       />          
-      <button>Enviar a localStorage</button>
+      <button>Save in localStorage</button>
     </form>
   )
 }

@@ -5,7 +5,7 @@ export default function Mensaje () {
     return (
         <>
             <NoInternetConection>
-                <h2>Probando tema de conexion</h2>
+                <h2>Online</h2>
             </NoInternetConection>
         </>
     );

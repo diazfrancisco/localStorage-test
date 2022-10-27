@@ -21,7 +21,7 @@ const NoInternetConection = (props) => {
             props.children
         )
     } else {
-        return(<h1>Se ha desconectado Internet</h1>)
+        return(<h1>Offline......</h1>)
     }
 }   
 
