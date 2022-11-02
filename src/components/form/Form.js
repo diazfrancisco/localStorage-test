@@ -16,7 +16,7 @@ export default function Formulario() {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(nombre)
-    onSubmit(local)
+    local && onSubmit(local)
   }
 
   const handleChange = (e) => {

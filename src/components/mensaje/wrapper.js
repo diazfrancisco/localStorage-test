@@ -21,7 +21,7 @@ const NoInternetConection = (props) => {
             props.children
         )
     } else {
-        return(<h1>Offline......</h1>)
+        return(<h2 className="msj-off">Offline......</h2>)
     }
 }   
 

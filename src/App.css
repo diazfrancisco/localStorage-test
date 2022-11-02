@@ -41,6 +41,10 @@
   color: #61dafb;
 }
 
+msj-off{
+  color:red;
+}
+
 form {
   display: flex;
   flex-direction: column;
